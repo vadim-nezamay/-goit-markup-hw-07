@@ -91,7 +91,7 @@ img {
   letter-spacing: 0.03em;
 }
 
-.header .logo-web {
+.header .logo__web {
   padding-top: 24px;
   padding-bottom: 25px;
 
@@ -319,7 +319,7 @@ img {
   width: calc((100%-90px) / 4);
 }
 
-.feature__list .item:not(:last-child) {
+.feature__list .feature__item:not(:last-child) {
   margin-right: 30px;
 }
 
@@ -331,7 +331,7 @@ img {
 
 .work__section h2,
 .section__team h2,
-.section-clients h2 {
+.section__clients h2 {
   margin-bottom: 50px;
 
   color: var(--title-text-color);
@@ -405,7 +405,7 @@ img {
   text-align: center;
 }
 
-.team-list .item {
+.team__list .social__team {
   box-shadow: var(--shadow-studio);
   border-radius: 0px 0px 4px 4px;
   background-color: var(--white-bg-color);
@@ -447,38 +447,45 @@ img {
 }
 
 /* FLEX Чим займаємося та команда */
-
-.section-work .work-list,
+.work__list{
+  display: flex;gap: 30px;
+}
+.section__work .work__list,
 .section__team .team__list {
   display: flex;
 }
 .work__list .item:not(:last-child) {
   margin-right: 30px;
 }
-.team__list .item:not(:last-child) {
+.team__list .social__item:not(:last-child) {
   margin-right: 30px;
 }
-
+.social__item{
+  
+    border-radius: 0px 0px 4px 4px;
+}
 /**
   |============================
   | СЕКЦІЯ КЛІЄНТИ
   |============================
 */
 
-.section-clients {
+.section__clients {
   padding-top: var(--section-padding-gap);
   padding-bottom: var(--section-padding-gap);
 }
 
-.section-clients .list {
+.section__clients .client__list {
   display: flex;
   justify-content: center;
 }
-.section-clients .item:not(:last-child) {
+.section__clients .social__item:not(:last-child) {
   margin-right: 30px;
 }
-
-.section-clients .link {
+.section__clients .client__item:not(:last-child) {
+  margin-right: 30px;
+}
+.section__clients .client__link {
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -495,8 +502,8 @@ img {
     border-color 250ms var(--cubic-bezier), transform 250ms var(--cubic-bezier);
 }
 
-.section-clients .link:hover,
-.section-clients .link:focus {
+.section__clients .client__link:hover,
+.section__clients .client__link:focus {
   color: var(--accent-color);
   fill: var(--accent-color);
   border-color: var(--accent-color);
@@ -529,7 +536,7 @@ footer .logo__studio {
   color: var(--white-text-color);
 }
 
-.footer-address a {
+.footer__address a {
   color: rgba(255, 255, 255, 0.6);
   font-style: normal;
   font-size: 14px;
@@ -538,18 +545,18 @@ footer .logo__studio {
   transition: color 250ms var(--cubic-bezier);
 }
 
-.footer-address a:hover,
-.footer-address a:focus {
+.footer__address a:hover,
+.footer__address a:focus {
   color: var(--accent-color);
 }
 
-.footer .address-item:not(:last-child) {
+.footer .address__item:not(:last-child) {
   margin-bottom: 9px;
 }
 
 /* FOOTER SOCIAL */
 
-.footer-flex {
+.footer__flex {
   display: flex;
   align-items: baseline;
 }
@@ -558,7 +565,7 @@ footer .logo__studio {
   margin-left: 70px;
 }
 
-.footer .social-title {
+.footer .social__title {
   margin-bottom: 20px;
 
   font-weight: 700;
@@ -569,8 +576,10 @@ footer .logo__studio {
 
   color: var(--white-text-color);
 }
-
-.social .list {
+.social__list{
+  gap: 10px;
+}
+.social .social__list {
   display: flex;
 }
 
@@ -674,7 +683,7 @@ footer .logo__studio {
   |============================
 */
 
-.filters .button {
+.filters__list .filters__button {
   display: inline-block;
   padding: 6px 22px;
   border-radius: 4px;
@@ -697,27 +706,27 @@ footer .logo__studio {
     box-shadow 250ms var(--cubic-bezier);
 }
 
-.filters .button:hover,
-.filters .button:focus {
+.filters__list .filters__button:hover,
+.filters__list .filters__button:focus {
   color: var(--white-text-color);
   background-color: var(--accent-bg-color);
   box-shadow: var(--shadow-portfolio);
 }
 
-.section-projects {
+.section__projects {
   padding-top: var(--section-padding-gap);
   padding-bottom: var(--section-padding-gap);
 }
 
-.section-projects .filters {
+.section__projects .filters__list {
   margin-bottom: 50px;
 }
 
-.project-list > .list-item {
+.project__list > .project__item {
   width: 370px;
 }
 
-.section-projects h2 {
+.section__projects h2 {
   width: 322px;
   min-height: 36px;
 
@@ -728,7 +737,7 @@ footer .logo__studio {
   letter-spacing: 0.06em;
 }
 
-.section-projects p {
+.section__projects p {
   width: 322px;
   min-height: 30px;
 
@@ -738,7 +747,7 @@ footer .logo__studio {
   line-height: 1.88;
 }
 
-.project-name {
+.project__name {
   padding: 20px 24px;
 
   border-left: 1px solid #ececec;
@@ -748,17 +757,17 @@ footer .logo__studio {
 
 /* FLEX FILTERS */
 
-.filters {
+.filters__list {
   display: flex;
   justify-content: center;
 }
-.filters .item:not(:last-child) {
-  margin-right: 8px;
+.filters__list {
+  gap: 8px;
 }
 
 /* FLEX PROJECTS */
 
-.project-list {
+.project__list {
   display: flex;
   flex-wrap: wrap;
   gap: var(--project-list-gap);
@@ -766,7 +775,7 @@ footer .logo__studio {
 
 /* Оверлей карточок Проєктів */
 
-.project-thumb {
+.project__thumb {
   position: relative;
 
   width: 370px;
@@ -775,7 +784,7 @@ footer .logo__studio {
   overflow: hidden;
 }
 
-.project-thumb .overlay {
+.project__thumb .project__overlay {
   position: absolute;
   top: 0;
   left: 0;
@@ -798,18 +807,18 @@ footer .logo__studio {
   transition: transform 250ms var(--cubic-bezier);
 }
 
-.project-list .project-link {
+.project__list .project__link {
   display: block;
   transition: box-shadow 250ms var(--cubic-bezier);
 }
 
-.project-list .project-link:hover,
-.project-list .project-link:focus {
+.project__list .project__link:hover,
+.project__list .project__link:focus {
   box-shadow: var(--shadow-portfolio);
 }
 
-.project-list .project-link:hover .overlay,
-.project-list .project-link:focus .overlay {
+.project__list .project__link:hover .project__overlay,
+.project__list .project__link:focus .project__overlay {
   transform: translatey(0);
 }
 
