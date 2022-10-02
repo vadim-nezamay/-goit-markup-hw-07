@@ -165,7 +165,7 @@ img {
 /**
   |============================
 */
-.nav__list .nav__item{
+.nav__list .nav__item {
   position: relative;
 
   padding-top: 32px;
@@ -447,8 +447,9 @@ img {
 }
 
 /* FLEX Чим займаємося та команда */
-.work__list{
-  display: flex;gap: 30px;
+.work__list {
+  display: flex;
+  gap: 30px;
 }
 .section__work .work__list,
 .section__team .team__list {
@@ -460,9 +461,8 @@ img {
 .team__list .social__item:not(:last-child) {
   margin-right: 30px;
 }
-.social__item{
-  
-    border-radius: 0px 0px 4px 4px;
+.social__item {
+  border-radius: 0px 0px 4px 4px;
 }
 /**
   |============================
@@ -576,7 +576,7 @@ footer .logo__studio {
 
   color: var(--white-text-color);
 }
-.social__list{
+.social__list {
   gap: 10px;
 }
 .social .social__list {
@@ -930,7 +930,7 @@ form > h2 {
   text-align: center;
   letter-spacing: 0.03em;
 
- color: var(--title-text-color);
+  color: var(--title-text-color);
 }
 
 .form__field {
